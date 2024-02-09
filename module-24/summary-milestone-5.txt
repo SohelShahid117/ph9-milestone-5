@@ -1,0 +1,19 @@
+24-1: What Is Dom, Connect Your JS File With Html File:
+
+1.link js file with html file----> <script src="./js/dom.js"></script>
+2.find the document/complete html DOM tree from the inspect-console--->console.log(document);
+3.find the body DOM tree---------------------------------------- ----->console.log(document.body);
+
+
+
+24-2 Traversing Dom - GetElementsByTagName:
+1.dom collection shika soro--------->const allHeading = document.getElementsByTagName('h1');
+2.console.log(allHeading);
+3.ai collection er upor for of loop chalano & innerText k ber kore ana--->for(const h1 of allHeading){
+    // console.log(h1);
+    console.log(h1.innerText);
+}
+
+
+
+24-3 Traversing Dom - GetElementByClass VS GetElementById
