@@ -1,0 +1,5 @@
+find the htl elements in 4 ways:
+1.getElementById
+2.getElementByClassName
+3.getElementByTagName
+4.querySelector & querySelectorAll
