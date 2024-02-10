@@ -9,28 +9,56 @@
         li{
             color: green;
         }
+        #fruits-title{
+            color: black;
+        }
+        .impotant-places{
+            color:fuchsia;
+        }
+        #places-title{
+            background-color: chartreuse;
+        }
     </style>
 </head>
 <body>
     <!-- 24-1: What Is Dom, Connect Your JS File With Html File -->
     <!-- 24-2 Traversing Dom - GetElementsByTagName -->
     <!-- 24-3 Traversing Dom - GetElementByClass VS GetElementById -->
+    <!-- 24-4 Traversing Dom - GetElementByQuerySelector, QuerySelectorAll -->
+    <!-- 24-5 Dynamic Style, GetAttribute, SetAttribute, InnerText, InnerHTML -->
+    <!-- 24-6 Styling Dom Properties, Add And Remove Css Class Using JS -->
     <header>
         <h1>Welcome to my DOM</h1>
     </header>
     <main>
-        <h1>my awesome DOM de baba</h1>
+        <section>
+            <h1>my awesome DOM de baba</h1>
         <ul>
             <li>Jalali set</li>
             <li>Shafayat</li>
             <li>Bonobas</li>
             <li>DOM de re baba</li>
         </ul>
+        </section>
+       <section class="fruits-container">
+        <h1 id="fruits-title" class="some-cls bgc-class random-cls">Fruits I like</h1>
         <ul>
             <li>Apple</li>
             <li>Banana</li>
             <li>Orange</li>
         </ul>
+       </section>
+       <section>
+        <h1 id="places-title">Places I like viist</h1>
+        <ul>
+            <li class="impotant-places">Rangamati</li>
+            <li class="impotant-places">Hoksobazar</li>
+            <li class="impotant-places">Saintmartin</li>
+            <li class="special-place">Sundorbon</li>
+            <li>Katabon</li>
+            <li>Bandorbon</li>
+        </ul>
+       </section>
     </main>
     
 <script src="./js/dom.js"></script>

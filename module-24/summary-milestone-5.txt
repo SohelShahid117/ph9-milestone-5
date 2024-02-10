@@ -17,3 +17,59 @@
 
 
 24-3 Traversing Dom - GetElementByClass VS GetElementById
+
+1.only 1 t element er/particular element er jonno---->document.getElementById('fruits-title');
+2.onek golo element er jonno ------------------------>const placesss = document.getElementsByClassName('impotant-places');
+console.log(placesss);
+for(place of placesss){
+    // console.log(place);
+    console.log(place.innerHTML);
+    console.log(place.innerText);
+}
+
+
+24-4 Traversing Dom - GetElementByQuerySelector, QuerySelectorAll
+
+1.only for 1st element coleection fron node list----------->const firstLi = document.querySelector('.fruits-container li');
+console.log(firstLi)
+console.log(firstLi.innerHTML)
+
+2.all nodelist element------------------------------------>const someLi = document.querySelectorAll('.fruits-container li');
+console.log(someLi);
+for(li of someLi){
+    console.log(li);
+    console.log(li.innerText);
+}
+
+
+
+//24-5 Dynamic Style, GetAttribute, SetAttribute, InnerText, InnerHTML
+
+1.all types of style show----------------------------------> document.getElementById('fruits-title').style;
+2.color set------------------------------------------------>document.getElementById('fruits-title').style.color=`blue`
+3.backgroundColor set-------------------------------------->document.getElementById('fruits-title').style.backgroundColor=`gray`
+4.textAlign set-------------------------------------------->document.getElementById('fruits-title').style.textAlign = `center`
+
+
+5.id k dore then attribute find out kora,add kora,remove kora,innerText,innerHTML ber kora----->const title = document.getElementById('fruits-title')
+console.log(title.getAttribute('id'));
+console.log(title.getAttribute('class'));
+console.log(title.classList);
+
+console.log(title.classList.remove('bgc-class'));
+title.classList.remove('bgc-class');
+console.log(title.classList);
+
+title.classList.add('purple-class');
+console.log(title.classList);
+title.setAttribute('title','set attribute now------>tooltip set by JS');
+
+document.getElementsByClassName('fruits-container')
+document.getElementsByClassName('fruits-container')[0]
+document.getElementsByClassName('fruits-container')[0].innerHTML
+document.getElementsByClassName('fruits-container')[0].innerText;
+document.getElementsByClassName('fruits-container')[0].innerHTML = '<h2>great ABC-DOM changing the content</h2>'
+
+
+//24-6 Styling Dom Properties, Add And Remove Css Class Using JS
+1.
