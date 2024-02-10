@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour of DOM</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <style>
         li {
             color: green;
@@ -26,16 +26,17 @@
 </head>
 
 <body>
-    <!-- 24-1: What Is Dom, Connect Your JS File With Html File -->
-    <!-- 24-2 Traversing Dom - GetElementsByTagName -->
-    <!-- 24-3 Traversing Dom - GetElementByClass VS GetElementById -->
-    <!-- 24-4 Traversing Dom - GetElementByQuerySelector, QuerySelectorAll -->
-    <!-- 24-5 Dynamic Style, GetAttribute, SetAttribute, InnerText, InnerHTML -->
     <!-- 24-6 Styling Dom Properties, Add And Remove Css Class Using JS -->
+    <!-- 24-7 NodeList, htmlcollection, parentNode, childnodes, createElement -->
+    <!-- 24-8 Create HTML elements using Javascript and appendChild -->
     <header>
         <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet voluptate unde vitae aspernatur eligendi ex
+            asperiores accusantium accusamus rem, placeat similique illum aperiam alias itaque consequuntur? Quo ullam
+            ipsam, consequatur sed quia enim omnis, beatae dolore odio tempora commodi iusto quod hic magni. Dolorum id,
+            expedita ex dicta non illum.</p>
     </header>
-    <main>
+    <main id="main-container">
         <section>
             <h1>my awesome DOM de baba</h1>
             <ul>
@@ -53,9 +54,9 @@
                 <li>Orange</li>
             </ul>
         </section>
-        <section>
+        <section id="places-container" class="large-text">
             <h1 id="places-title">Places I like viist</h1>
-            <ul>
+            <ul id="places-list">
                 <li class="impotant-places">Rangamati</li>
                 <li class="impotant-places">Hoksobazar</li>
                 <li class="impotant-places">Saintmartin</li>
@@ -67,6 +68,8 @@
     </main>
 
     <script src="./js/dom.js"></script>
+    <script src="./js/append.js"></script>
+    <script src="./js/styleInJs.js"></script>
     <script>
         const student = {
             name: 'abul',

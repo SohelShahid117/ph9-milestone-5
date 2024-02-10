@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.yello-bg {
+    background-color: yellow !important;
+    /* text-align: center; */
+
+}
+
+.x {
+    text-align: center;
+}
+
+.large-text {
+    /* font-size: 100px; */
+}
