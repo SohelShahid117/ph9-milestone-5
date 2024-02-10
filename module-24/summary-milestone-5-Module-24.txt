@@ -148,6 +148,43 @@ sectionDress.innerHTML = `
 
 
 
-24-9 Module summary (DOM Review)
+24-9 Module summary (DOM Review):
 
-1.
+1.maintain order---------------------->j script file opore hobe setir value opore takbe
+
+2.using TagName----------------------->const allLi = document.getElementsByTagName('li');
+console.log(allLi);
+
+3.using className--------------------->const allTitles = document.getElementsByClassName('section-title');
+console.log(allTitles);
+
+4.using ID---------------------------->const secndSection = document.getElementById('second-section');
+console.log(secndSection);
+
+5.add style--------------------------->secndSection.style.backgroundColor = `yellow`
+secndSection.style.color = `tomato`
+
+6.create element--------------------->
+6A.where to add---------------------->const secondList = document.getElementById('second-list');
+console.log(secondList);
+
+6B.what to be added------------------>const li = document.createElement('li');
+li.innerText = 'this is list item-5'
+
+6C.add the child--------------------->secondList.appendChild(li);
+
+7.dirctly create element------------->
+7A.where to add---------------------->const mainContainer = document.getElementById('main-container')
+
+7B.what to be added------------------>const section = document.createElement('section');
+
+7C.add the child--------------------->section.innerHTML = `
+    <h1 class="section-title">section title - 3A</h1>
+    <p>Extra create a section using JS-append child</p>
+    <ul>
+        <li>list item -1A</li>
+        <li>list item -2A</li>
+        <li>list item -3A</li>
+    </ul>
+`
+mainContainer.appendChild(section);
