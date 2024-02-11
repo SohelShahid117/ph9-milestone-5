@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 25-6 Simple github like delete confirmation button -->
+    <h1>Explore more event</h1>
+    <button id="btn-more">Events</button>
+    <input type="text" name="" id="text-field">
+
+</body>
+
+<script>
+    // 25-6 Simple github like delete confirmation button
+    // document.getElementById('btn-more').addEventListener('click/mouseenter/mousemove/keyup/keydown/keypress/blur/focus', function () {
+    //     console.log('event triggerd')
+    // })
+    document.getElementById('btn-more').addEventListener('keyup', function () {
+        // console.log('event triggerd')
+    })
+    document.getElementById('text-field').addEventListener('keyup', function (event) {
+        // console.log('event triggered inside the input field')
+        console.log(event)
+        console.log(event.target)
+        console.log(event.target.value)
+    })
+</script>
+
+</html>

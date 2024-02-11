@@ -142,6 +142,41 @@ document.getElementById('golden-rod').addEventListener('click', function () {
 
 
 25-6 Simple github like delete confirmation button:
-1.
+1.  <button id="btn-more">Events</button>
+    <input type="text" name="" id="text-field">
 
+document.getElementById('btn-more').addEventListener('click/mouseenter/mousemove/keyup/keydown/keypress/blur/focus', function () {
+         console.log('event triggerd')
+     })
+2.  document.getElementById('text-field').addEventListener('keyup', function (event) {
+        console.log(event)
+        console.log(event.target)
+        console.log(event.target.value)
+    })
+
+3.removeAttribute,setAttribute------------------->
+    <h1 id="secret-info">my secret info</h1>
+    <input id="delete-confirm" type="text" placeholder="please type delete">
+    <button id="btn-delete" disabled>delete</button>
+
+ document.getElementById('delete-confirm').addEventListener('keyup', function (evnt) {
+            const text = evnt.target.value;
+            // console.log(text)
+            let deleteBtn = document.getElementById('btn-delete');
+            if (text === 'delete') {
+                deleteBtn.removeAttribute('disabled');
+            } else {
+                deleteBtn.setAttribute('disabled', true);
+            }
+        })
+        document.getElementById('btn-delete').addEventListener('click', function () {
+            const secretInfo = document.getElementById('secret-info');
+            secretInfo.style.display = 'none';
+        })
+
+
+
+
+25-7 (semi-advanced) Event bubble and Stop propagating:
+1.
 
