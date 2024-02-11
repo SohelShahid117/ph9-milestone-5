@@ -1,1 +1,0 @@
-console.log(`this is seperate JS file`)

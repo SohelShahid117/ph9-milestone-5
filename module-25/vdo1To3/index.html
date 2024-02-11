@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module-25:Event,addEventListener,Event Bubble</title>
+</head>
+
+<body>
+    <!-- 25-1: 25-1 What Is Event, Different Types Of Event In Web -->
+    <!-- 25-2 Add onclick handler directly or via javascript -->
+    <!-- 25-3 Different ways to use addEventListener on a button -->
+    <!-- 25-4 Most common ways to set Event Handlers -->
+    <h1 onclick="console.log('i am clicked')">Starting DOM events</h1>
+    <button onclick="console.log(7)">Click me</button>
+    <button onclick="console.log(69)">Another Button</button>
+
+    <!-- option-1:directly set for events -->
+    <button onclick="document.body.style.backgroundColor='yellow'">Click Yellow</button>
+
+    <!-- option-2:function declare for events -->
+    <button onclick="makeRed()">Click Red</button>
+
+    <!-- option-3:use id for events -->
+    <button id="make-blue">Make blue</button>
+    <button id="make-purple">Make purple</button>
+
+    <!-- option-4:use id & addEventListener method -->
+    <button id="make-pink">Make pink</button>
+    <button id="make-green">Make Green</button>
+
+
+    <!-- option-4 & final -->
+    <button id="golden-rod">Make goldenRod</button>
+
+    <script src="./js/events.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

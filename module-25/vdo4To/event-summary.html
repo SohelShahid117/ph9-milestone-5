@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Summary</title>
+</head>
+
+<body>
+    <!-- 25-4 Most common ways to set Event Handlers -->
+
+    <h1>Final DOM event handelers</h1>
+    <h3 id="handler-text">Default text</h3>
+    <br>
+    <p id="input-text-display">default input text</p>
+    <input id="input-field" type="text">
+    <button id="update-btn">Update</button>
+    <br>
+    <br>
+    <button onclick="handleOnclic()">handle-event-by-onclick function</button>
+    <button id="event-listener">handle-event-by-addEventListener-Method</button>
+
+    <script>
+        // 25-4 Most common ways to set Event Handlers
+        // Option-1
+        function handleOnclic() {
+            // console.log('btn clicked');
+            const handlerText = document.getElementById('handler-text');
+            handlerText.innerText = 'handle this text by handleOnclic() function now';
+        }
+
+        // Option-2
+        // const eventListener = document.getElementById('event-listener');
+        document.getElementById('event-listener').addEventListener('click', function () {
+            const handlerText2 = document.getElementById('handler-text');
+            handlerText2.innerText = 'handle this text by addEventListener method';
+        });
+
+        document.getElementById('update-btn').addEventListener('click', function () {
+            const inputField = document.getElementById('input-field');
+            const inputText = inputField.value;
+            const inputTextDisplay = document.getElementById('input-text-display');
+            // console.log(inputText);
+            // console.log(inputTextDisplay.innerText = inputText);
+            inputTextDisplay.innerText = inputText;
+            inputField.value = '';
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,5 +1,147 @@
 ***************************MOdule-25:*********************************
 
-25-1: 25-1 What Is Event, Different Types Of Event In Web
+25-1: 25-1 What Is Event, Different Types Of Event In Web:
 1.onclik kibabe kaj kore----------------------><h1 onclick="console.log('i am clicked')">Starting DOM events</h1>
 <button onclick="console.log(7)">Click me</button>
+
+
+25-2 Add onclick handler directly or via javascript:
+1.option-1:direct handling events-----------><button onclick="document.body.style.backgroundColor='yellow'">Click Yellow</button>
+2.option-2:function declaration-------------> <button onclick="makeRed()">Click Red</button>
+[option-2 is VVVVVVVVVVVImportant----------!important]
+function makeRed() {
+    document.body.style.backgroundColor = 'red';
+}
+
+3.option-3:function declaration using id-------------><button id="make-blue">Make blue</button>
+<button id="make-purple">Make purple</button>
+
+// option-3
+const makeBlueBtn = document.getElementById('make-blue');
+// console.log(makeBlueBtn);
+makeBlueBtn.onclick = makeBlue;
+function makeBlue() {
+    document.body.style.backgroundColor = 'blue';
+}
+
+// option-3
+const makePurpleBtn = document.getElementById('make-purple');
+// console.log(makePurpleBtn)
+makePurpleBtn.onclick = function () {
+    document.body.style.backgroundColor = 'purple';
+}
+
+
+
+25-3 Different ways to use addEventListener on a button:
+// option-4
+1.use addEventListener method-----------------> <button id="make-pink">Make pink</button>
+<button id="make-green">Make Green</button>
+
+const makePinkBtn = document.getElementById('make-pink');
+// console.log(makePinkBtn)
+makePinkBtn.addEventListener('click', makePink);
+function makePink() {
+    document.body.style.backgroundColor = 'pink';
+}
+
+const makeGreenBtn = document.getElementById('make-green');
+// console.log(makeGreenBtn)
+makeGreenBtn.addEventListener('click', function makeGreen() {
+    document.body.style.backgroundColor = 'green';
+});
+
+// option-4----->Another
+[option-4 is VVVVVVVVVVVImportant----------!important]
+2.directly use addEventListener method-----------------> <button id="golden-rod">Make goldenRod</button>
+document.getElementById('golden-rod').addEventListener('click', function () {
+    document.body.style.backgroundColor = 'goldenrod';
+});
+
+
+
+
+25-4 Most common ways to set Event Handlers:
+1.Final DOM event handelers---------------------------->
+    <h3 id="handler-text">Default text</h3>
+    <br>
+    
+    <br>
+    <button onclick="handleOnclic()">handle-event-by-onclick function</button>
+    <button id="event-listener">handle-event-by-addEventListener-Method</button>
+
+
+  	// Option-1
+        function handleOnclic() {
+            // console.log('btn clicked');
+            const handlerText = document.getElementById('handler-text');
+            handlerText.innerText = 'handle this text by handleOnclic() function now';
+        }
+
+        // Option-2
+        document.getElementById('event-listener').addEventListener('click', function () {
+            const handlerText2 = document.getElementById('handler-text');
+            handlerText2.innerText = 'handle this text by addEventListener method';
+        });
+
+2.handle the element using input tag----------->
+    <p id="input-text-display">default input text</p>
+    <input id="input-field" type="text">
+    <button id="update-btn">Update</button>
+    <br>
+
+    	    document.getElementById('update-btn').addEventListener('click', function () {
+            const inputField = document.getElementById('input-field');
+            const inputText = inputField.value;
+            const inputTextDisplay = document.getElementById('input-text-display');
+            // console.log(inputText);
+            // console.log(inputTextDisplay.innerText = inputText);
+            inputTextDisplay.innerText = inputText;
+            inputField.value = '';
+
+        });
+
+
+
+
+25-5 Create a comment box and display comment:
+1.comment container---------------------->
+<div id="comment-container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam esse fugit repellat deleniti dolores laborum
+           quaerat voluptatem, praesentium optio sit, minima harum, similique ad molestiae repellendus molestias qui
+           impedit exercitationem?
+	</p>
+</div>
+
+2.comment box----------------------------->
+<div>
+        <textarea name="" id="new-comment" cols="80" rows="10"></textarea>
+        <br>
+        <button id="btn-post">Post</button>
+</div>
+
+3.JS steps for commnet--------------------->
+ //step-1:addEventListener method
+  document.getElementById('btn-post').addEventListener('click', function () {
+
+            //step-2:go to the comment value inside the text area
+            const commentBox = document.getElementById('new-comment');
+            const newComment = commentBox.value;
+
+            //step-3:set the comment inside the comment container
+            const commentContainer = document.getElementById('comment-container');
+            const p = document.createElement('p');
+            p.innerText = newComment;
+            commentContainer.appendChild(p);
+
+            // step-4:clear the comment box
+            commentBox.value = ' ';
+
+     });
+
+
+
+25-6 Simple github like delete confirmation button:
+1.
+
+
