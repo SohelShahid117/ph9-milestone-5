@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 25-9 DOM events summary and and homework -->
+    <!-- 25-10 Basic js events all in one -->
+    <h1>Explore DOM Events</h1>
+    <button onclick="makeGreen()">Make Green</button>
+    <button id="make-yellow">Make yELLOW</button>
+    <input id="user-email" type="email">
+    <button onclick="purchaseProduct()">Purchase Now</button>
+
+    <SCript>
+        // 25-9 DOM events summary and and homework
+        // 25-10 Basic js events all in one
+        //quiz
+        function purchaseProduct() {
+            console.log('product purchased');
+        }
+        function makeGreen() {
+            document.body.style.backgroundColor = `green`;
+        }
+        document.getElementById('make-yellow').addEventListener('click', function () {
+            document.body.style.backgroundColor = `yellow`;
+        })
+        document.getElementById('user-email').addEventListener('keyup', function (event) {
+            console.log(event);
+            console.log(event.target);
+            console.log(event.target.value);
+
+        })
+    </SCript>
+</body>
+
+</html>

@@ -177,6 +177,94 @@ document.getElementById('btn-more').addEventListener('click/mouseenter/mousemove
 
 
 
-25-7 (semi-advanced) Event bubble and Stop propagating:
-1.
+25-7:(semi-advanced) Event bubble and Stop propagating:
+1.what is bubbling------------->
+<section id="list-container">
+        <ul id="list-ul">
+            <li id="item-1">Lorem ipsum dolor sit amet.</li>
+            <li id="item-2">Reiciendis sed quasi quas magnam.</li>
+            <li id="item-3">Commodi voluptas nisi quam dolor.</li>
+            <li id="item-4">Ut ab necessitatibus molestias enim.</li>
+            <li id="item-5">Excepturi nemo inventore a rem?</li>
+            <li id="item-6">Accusamus odit autem mollitia soluta!</li>
+        </ul>
+    </section>
+
+document.getElementById('item-2').addEventListener('click', function (event) {
+            console.log('item-2 clicked');
+            event.stopPropagation();
+            event.stopImmediatePropagation()
+        })
+
+//earn good knowledge about------------>1.event.stopPropagation();
+					2.event.stopImmediatePropagation();
+
+
+
+25-8:(advanced) Event delegate and benefit of Event bubble:
+1.event delegate----------------->
+ <h1>explore event delegate</h1>
+    <ul id="list-container">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Recusandae, aut aperiam!</li>
+        <li class="item">A, esse quos.</li>
+        <li class="item">Deleniti, nihil expedita?</li>
+        <li class="item">Quos, similique error.</li>
+        <li class="item">Ipsam, blanditiis exercitationem.</li>
+    </ul>
+ <button id="btn-add-item">Add item</button>
+
+
+//remove item
+document.getElementById('list-container').addEventListener('click', function (evnt) {
+            console.log(evnt.target);
+            console.log(evnt.target.parentNode.removeChild(evnt.target))
+        })
+
+//add -item
+document.getElementById('btn-add-item').addEventListener('click', function () {
+            const listContainer = document.getElementById('list-container');
+            const li = document.createElement('li');
+            li.innerText = 'Brand new item';
+            li.classList.add('item');
+            listContainer.appendChild(li);
+
+        })
+
+
+
+
+
+25-9 DOM events summary and and homework:
+25-10 Basic js events all in one:
+1.  <h1>Explore DOM Events</h1>
+    <button onclick="makeGreen()">Make Green</button>
+    <button id="make-yellow">Make yELLOW</button>
+    <input id="user-email" type="email">
+
+  function makeGreen() {
+            document.body.style.backgroundColor = `green`;
+        }
+        document.getElementById('make-yellow').addEventListener('click', function () {
+            document.body.style.backgroundColor = `yellow`;
+    })
+        document.getElementById('user-email').addEventListener('keyup', function (event) {
+            console.log(event);
+            console.log(event.target);
+            console.log(event.target.value);
+
+    })
+
+2.event bubbling(nich teke uporer dike handle hobe---->child to parent to parent to parent...==>li->ul->section->body->window)
+{first execute the target then its parents to parents to parents...}
+3.event capturing(reverse of bubbling--->capture kore kore upor teke nicher dike jabe)
+4.event bubble vs event capture
+5.stop event propagation
+6.stop immediate propagation
+7.event delegation(jetate event hobe setar baper sate/parentNode er sate connect kore kaj kora)
+8.The DOM event model consists of:
+	a.events
+	b.event listeners
+9.dispatching an event/event chain/event propagation
+
 
