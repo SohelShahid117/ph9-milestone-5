@@ -1,3 +1,5 @@
 ***************************MOdule-25:*********************************
 
-25-1: 
+25-1: 25-1 What Is Event, Different Types Of Event In Web
+1.onclik kibabe kaj kore----------------------><h1 onclick="console.log('i am clicked')">Starting DOM events</h1>
+<button onclick="console.log(7)">Click me</button>
