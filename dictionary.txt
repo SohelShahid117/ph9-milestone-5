@@ -16,3 +16,19 @@
 16.Traversing-ট্রাভার্সিং,ঢোঁড়ন----------------------->searching
 17.traverse-ঢুকা-------------------------------------->go in,succeed
 18.Enumerating-গণনা করা--------------------------->count,compute
+19.streaming-
+20.traverse-
+21.manipulate-
+22.Retrieved-
+23.explicit-
+24.interface-
+25.Consortium-
+26.constructed-
+27.access-
+28.Traversal-
+29.Streak-
+30.delegate-
+31.propagation-
+32.manipulate-
+33.disappear-
+34.
