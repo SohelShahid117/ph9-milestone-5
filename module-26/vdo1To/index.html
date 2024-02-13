@@ -13,6 +13,11 @@
     <!-- 26-3 Get Triangle Base And Height Using Event And Function -->
     <!-- 26-4 Calculate The Triangle Area And Display It On UI -->
     <!-- 26-5 (Recap) Calculate Rectangle Area And Display -->
+    <!-- 26-6 Extract Common Code Into A Function -->
+    <!-- 26-7 Create A Reusable Function For Similar Task -->
+    <!-- 26-8 (Recap) Create A Reusable Function For Similar Task -->
+    <!-- 26-9 Module Summary -->
+    
     <!--
     1.know area of:
     a.triangle-1/2*bomi*ussota(1/2*b*h)
@@ -82,21 +87,45 @@
                 <div class="card  w-52 bg-base-100 shadow-xl">
                     <figure><img class="m-4" src="./images/parallelogram.png" alt="Shoes" /></figure>
                     <div class="card-body">
-                      <h3 class="text-3xl text-center p-4">Parallelogram</h3>
-                      <p class="text-center">Area = w x l</p>
+                      <h3 class="text-2xl text-center p-2">Parallelogram</h3>
+                      <p class="text-center">Area = b x h</p>
                       <div class="">
-                        <input id="rectangle-width" class="w-16 text-2xl p-1 rounded" type="text" placeholder="w">
+                        <input id="parallelo-base" class="w-16 text-2xl p-1 rounded" type="text" placeholder="b">
                         <span class="mr-1 ml-1">cm</span>
-                        <input id="rectangle-length" class="w-16 text-2xl p-1 rounded" type="text" placeholder="l">
+                        <input id="parallelo-height" class="w-16 text-2xl p-1 rounded" type="text" placeholder="h">
                         <span class="mr-1 ml-1">cm</span>
                       </div>
                       <div>
-                        <p class="text-center">Area = <span id="rectangle-area">0</span>
+                        <p class="text-center">Area = <span id="parallelo-area">0</span>
                           <span>cm<sup>2</sup></span>
                         </p>
                       </div>
                       <div class="card-actions">
-                        <button class="btn btn-primary w-full" onclick="calculateRectangle()">Calculate</button>
+                        <button class="btn btn-primary w-full" onclick="calculateParallelogram()">Calculate</button>
+                      </div>
+                    </div>
+                </div>
+                
+                
+                <!-- pentagon card -->
+                <div class="card  w-52 bg-base-100 shadow-xl">
+                    <figure><img class="m-4" src="./images/pentagon.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h3 class="text-2xl text-center p-2">Pentagon</h3>
+                      <p class="text-center">Area = 0.5 x p x a</p>
+                      <div class="">
+                        <input id="pentagon-perimeter" class="w-16 text-2xl p-1 rounded" type="text" placeholder="p">
+                        <span class="mr-1 ml-1">cm</span>
+                        <input id="pentagon-apotheme" class="w-16 text-2xl p-1 rounded" type="text" placeholder="a">
+                        <span class="mr-1 ml-1">cm</span>
+                      </div>
+                      <div>
+                        <p class="text-center">Area = <span id="pentagon-area">0</span>
+                          <span>cm<sup>2</sup></span>
+                        </p>
+                      </div>
+                      <div class="card-actions">
+                        <button class="btn btn-primary w-full" onclick="calculatePentagonArea()">Calculate</button>
                       </div>
                     </div>
                 </div>
@@ -124,6 +153,9 @@
                       </div>
                     </div>
                 </div>
+
+
+
                 <!-- triangle card -->
                 <div class="card  w-52 bg-base-100 shadow-xl">
                     <figure><img src="./images/triangle.png" alt="Shoes" /></figure>
@@ -205,5 +237,7 @@
     
 <script src="./js/calculate-triangle.js"></script>
 <script src="./js/rectangle-area.js"></script>
+<script src="./js/parallelogram-area.js"></script>
+<script src="./js/pentagon-area.js"></script>
 </body>
 </html>

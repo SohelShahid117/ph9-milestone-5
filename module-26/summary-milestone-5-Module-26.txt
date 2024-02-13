@@ -1,4 +1,4 @@
-***************************MOdule-25:*********************************
+***************************MOdule-26:*********************************
 
 26-1 Project Overview And Setup:
 
@@ -76,6 +76,61 @@ h.ellipse-pi*brihot okker doirgo*kudro okker doirgo(pi*a*b)
     // console.log(area);
 }
 
+
+26-6 Extract Common Code Into A Function:
+26-7 Create A Reusable Function For Similar Task:
+
+1.function calculateParallelogram(){
+    const base =parallelogramValue('parallelo-base') ;
+    // console.log(base);
+    const height =parallelogramValue('parallelo-height') ;
+    // console.log(height);
+    const area = base* height;
+    setInnerTextValue('parallelo-area',area);
+    
+}
+
+function parallelogramValue(baseOrHeightId){
+    const paralleloInput = document.getElementById(baseOrHeightId);
+    // console.log(paralleloBaseInput);
+    const paralleloValue = paralleloInput.value ;
+    // console.log(paralleloBaseValue);
+    const valueNumber =  parseFloat(paralleloValue);
+    // console.log(base);
+    return valueNumber;
+}
+
+function setInnerTextValue(innerTextId,value){
+    document.getElementById(innerTextId).innerText = value;
+}
+
+
+
+26-8 (Recap) Create A Reusable Function For Similar Task-Pentagon Area:
+1.function calculatePentagonArea(){
+    // console.log(`connceted`);
+    const perimeter =pentagonValue('pentagon-perimeter') ;
+    const apotheme =pentagonValue('pentagon-apotheme');
+    console.log(perimeter,apotheme);
+    const area = 0.5 * perimeter * apotheme;
+    setInnerTextValuePentagon('pentagon-area',area)
+}
+
+function pentagonValue(perimeterOrApothemeId){
+    const pentagonInput = document.getElementById(perimeterOrApothemeId);
+    const pentagonValue = pentagonInput.value ;
+    const valueNumber =  parseFloat(pentagonValue);
+    return valueNumber;
+}
+
+function setInnerTextValuePentagon(innerTextId,value){
+    document.getElementById(innerTextId).innerText = value;
+}
+
+
+
+26-9 Module Summary:
+1.
 
 
 
