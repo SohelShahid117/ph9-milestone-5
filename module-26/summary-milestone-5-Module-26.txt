@@ -130,7 +130,43 @@ function setInnerTextValuePentagon(innerTextId,value){
 
 
 26-9 Module Summary:
-1.
+1.function calculateEllipseArea() {
+    // console.log(`ellipse connected`);
+    const majorRadius = getInputById('ellipse-major-radius');
+    // console.log(majorRadius);
+    const minorRadius = getInputById('ellipse-minor-radius');
+    const area = 3.1416 * majorRadius * minorRadius;
+    setInnerValue('ellipse-area', area);
+}
+
+function getInputById(id) {
+    const ellipseId = document.getElementById(id);
+    const ellipseValue = ellipseId.value;
+    const majorOrMinorNumber = parseFloat(ellipseValue);
+    return majorOrMinorNumber;
+}
+
+function setInnerValue(innerId, areaValue) {
+    document.getElementById(innerId).innerText = areaValue;
+}
+
+
+
+
+reward vdo-JS Mouse Events:(mousedown,mouseup,mousemove)
+1.this vdo is not good-learn knowledge about this vdo related code from youtube,google
+
+const container = document.getElementById('container');
+const ball = document.getElementById('ball')
+
+document.addEventListener('mousemove', function (e) {
+    let x = e.clientX;
+    let y = e.clientY;
+    ball.style.top = y + 'px';
+    ball.style.left = x + 'px';
+})
+
+
 
 
 
