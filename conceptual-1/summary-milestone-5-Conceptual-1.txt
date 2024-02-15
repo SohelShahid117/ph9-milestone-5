@@ -1,0 +1,24 @@
+Part-1:min-0To:
+1.
+follow Rayans website
+rayanser console e jao
+enter dao - window
+enter dao - document
+enter dao-console.dir(document)
+console.log(typeof document)
+dir is father of log
+
+2.  
+const title = document.getElementById('title');
+       console.log(title)
+       console.log(title.innerText);
+       title.innerText = `My JS Power`;
+       console.log(title)
+       console.log(title.innerText);
+       title.style.color = 'red';
+       title.style.backgroundColor = 'yellow';
+
+3.
+const listItem = document.querySelector('.list-items');
+       console.log(listItem);
+       listItem.textContent = 'done by querySelector';

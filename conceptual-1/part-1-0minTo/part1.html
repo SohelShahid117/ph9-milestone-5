@@ -6,10 +6,30 @@
     <title>Play with DOM:Part-1-0MinTo</title>
 </head>
 <body>
+    <h2 id="title">play with DOM</h2>
+    <ul>
+        <li class="list-items">item-1</li>
+        <li class="list-items">item-2</li>
+        <li class="list-items">item-3</li>
+        <li class="list-items">item-4</li>
+        <li class="list-items">item-5</li>
+    </ul>
 
     
     <script>
-        console.log('hello world');
+       const title = document.getElementById('title');
+       console.log(title)
+       console.log(title.innerText);
+       title.innerText = `My JS Power`;
+       console.log(title)
+       console.log(title.innerText);
+       title.style.color = 'red';
+       title.style.backgroundColor = 'yellow';
+
+       const listItem = document.querySelector('.list-items');
+       console.log(listItem);
+       listItem.textContent = 'done by querySelector';
+        
     </script>
 <script src="./js/script.js"></script>
 </body>
