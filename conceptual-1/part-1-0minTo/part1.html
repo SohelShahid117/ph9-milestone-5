@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,14 @@
 </head>
 <body>
     <h2 id="title">play with DOM</h2>
-    <ul>
+    <ul id="list-parent">
         <li class="list-items">item-1</li>
         <li class="list-items">item-2</li>
         <li class="list-items">item-3</li>
         <li class="list-items">item-4</li>
         <li class="list-items">item-5</li>
     </ul>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla cumque quisquam nisi quo sapiente molestias nam autem? Ex, ratione neque.</p>
 
     
     <script>
@@ -22,6 +24,7 @@
        console.log(title.innerText);
        title.innerText = `My JS Power`;
        console.log(title)
+
        console.log(title.innerText);
        title.style.color = 'red';
        title.style.backgroundColor = 'yellow';
@@ -29,7 +32,40 @@
        const listItem = document.querySelector('.list-items');
        console.log(listItem);
        listItem.textContent = 'done by querySelector';
-        
+
+       const items = document.getElementsByClassName('list-items');
+       console.log(items);
+
+       for(itm of items){
+        console.log(itm);
+        itm.style.color='red';
+       }
+       console.log(typeof items);
+
+       const qrySlctrAll = document.querySelectorAll('li');
+       console.log(qrySlctrAll);
+
+       const qrySlctrAll2 = document.querySelectorAll('.list-items');
+       console.log(qrySlctrAll2);
+
+       const itemsArr = Array.from(items);//Arry.from()--->convert to Array like
+       console.log(itemsArr);
+       console.log(typeof itemsArr);
+
+       for(itmArr of itemsArr){
+        console.log(itmArr);
+        itmArr.style.fontSize = '30px';
+       }
+
+       const bdyNam = document.querySelector('body');
+       console.log(bdyNam)
+       //node-comment:evry element is node but evry node is not element
+       console.log(bdyNam.childNodes)
+       console.log(bdyNam.children)
+       const listParent = document.querySelector('#list-parent');
+       console.log(listParent);
+       console.log(listParent.childNodes);
+       console.log(listParent.children);
     </script>
 <script src="./js/script.js"></script>
 </body>
