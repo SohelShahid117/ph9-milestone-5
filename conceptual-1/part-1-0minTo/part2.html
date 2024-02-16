@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play with DOM:Part-2-70MinTo</title>
+    <title>Play with DOM:Part-2-70MinTo100</title>
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
     <h2 class="first-heading" id="title">play with DOM</h2>
     <ul id="list-parent">
+        <li>I love JavaScript/li>
         <li style="display: none;" class="list-items">item-1</li>
-        <li class="list-items">item-2</li>
+        <li id="scnd" class="list-items">item-2</li>
         <!-- comment node -->
         <li class="list-items">item-3</li>
         <li class="list-items">item-4</li>
@@ -57,6 +59,17 @@
 
     console.log(ul);
     console.log(ul.innerHTML);
+
+    const scndLi = document.getElementById('scnd');
+    console.log(scndLi);
+
+    const newLi = document.createElement('li');
+    newLi.innerText = 'hello world';
+
+    ul.insertBefore(newLi,scndLi);
+
+    h2.classList.add('common-class');
+    console.log(h2);
     
 </script>    
 </body>

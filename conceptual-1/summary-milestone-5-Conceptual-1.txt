@@ -73,5 +73,69 @@ const items = document.getElementsByClassName('list-items');
 
 
 
-Part-2:min-70To:
+Part-2:min-70To100:
+1.  
+//  const li = document.querySelector('.list-items');
+     const li = document.querySelector('li');
+     console.log(li);
+     console.log(li.innerHTML);
+     console.log(li.innerText);
+     console.log(li.textContent);
+
+2.
+const ul = document.querySelector('ul');
+     console.log(ul);
+     console.log(ul.innerHTML); //ul er bitorer complete code dekabe
+     console.log(ul.innerText);  //only browser displayr content golo dekabe
+     console.log(ul.textContent);//coder sob content golo dekabe
+    //  ul.innerHTML = '<b>Hello</b>' //inject the tag elemment directly;
+
+3.
+ const h2 = document.querySelector('h2');
+    console.log(h2);
+    h2.removeAttribute('class');
+    console.log(h2);
+
+4.
+ h2.setAttribute('class','add-attribute');
+    console.log(h2);
+
+    const id = h2.getAttribute('id');
+    console.log(id);
+
+5.
+h2.classList.add('first','second','third','fourth');
+    console.log(h2);
+
+    h2.classList.remove('second');
+    console.log(h2);
+
+6.
+    const liCreate = document.createElement('li');
+    liCreate.innerText = 'last li created';
+    console.log(liCreate);
+
+    ul.appendChild(liCreate);
+
+    console.log(ul);
+    console.log(ul.innerHTML);
+
+7.
+ const scndLi = document.getElementById('scnd');
+    console.log(scndLi);
+
+    const newLi = document.createElement('li');
+    newLi.innerText = 'hello world';
+
+    ul.insertBefore(newLi,scndLi);
+
+8.
+    h2.classList.add('common-class');
+    console.log(h2);
+
+
+
+
+
+Part-3:100min to
 1.
