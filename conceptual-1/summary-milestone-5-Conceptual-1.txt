@@ -1,7 +1,8 @@
-Part-1:min-0To:
+Part-1:min-0To70Min:
+
 1.
-follow Rayans website
-rayanser console e jao
+follow Ryans website
+ryanser console e jao
 enter dao - window
 enter dao - document
 enter dao-console.dir(document)
@@ -22,3 +23,55 @@ const title = document.getElementById('title');
 const listItem = document.querySelector('.list-items');
        console.log(listItem);
        listItem.textContent = 'done by querySelector';
+
+4. 
+const items = document.getElementsByClassName('list-items');
+       console.log(items);
+
+5.
+ for(itm of items){
+        console.log(itm);
+        itm.style.color='red';
+       }
+
+6.
+      const qrySlctrAll = document.querySelectorAll('li');
+       console.log(qrySlctrAll);
+
+       const qrySlctrAll2 = document.querySelectorAll('.list-items');
+       console.log(qrySlctrAll2);
+
+7.
+
+       const itemsArr = Array.from(items);//Arry.from()--->convert to Array like
+       console.log(itemsArr);
+       console.log(typeof itemsArr);
+
+8.
+  const bdyNam = document.querySelector('body');
+       console.log(bdyNam)
+       //node-comment:evry element is node but evry node is not element
+       console.log(bdyNam.childNodes) //all nodes show korbe
+       console.log(bdyNam.children) //only element golo show korbe
+       const listParent = document.querySelector('#list-parent');
+       console.log(listParent);
+       console.log(listParent.childNodes);
+       console.log(listParent.children);
+
+
+9.
+   const ul = document.getElementById('list-parent');
+        console.log(ul);
+        console.log(ul.parentNode);
+        console.log(ul.parentElement);
+        console.log(ul.previousElementSibling);
+        console.log(ul.previousSibling);
+        console.log(ul.nextElementSibling);
+        console.log(ul.nextSibling);
+
+
+
+
+
+Part-2:min-70To:
+1.

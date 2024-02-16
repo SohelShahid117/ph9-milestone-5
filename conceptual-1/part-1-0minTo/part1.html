@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play with DOM:Part-1-0MinTo</title>
+    <title>Play with DOM:Part-1-0MinTo70Min</title>
 </head>
 <body>
     <h2 id="title">play with DOM</h2>
     <ul id="list-parent">
         <li class="list-items">item-1</li>
         <li class="list-items">item-2</li>
+        <!-- comment node -->
         <li class="list-items">item-3</li>
         <li class="list-items">item-4</li>
         <li class="list-items">item-5</li>
@@ -60,12 +61,22 @@
        const bdyNam = document.querySelector('body');
        console.log(bdyNam)
        //node-comment:evry element is node but evry node is not element
-       console.log(bdyNam.childNodes)
-       console.log(bdyNam.children)
+       console.log(bdyNam.childNodes) //all nodes show korbe
+       console.log(bdyNam.children) //only element golo show korbe
        const listParent = document.querySelector('#list-parent');
        console.log(listParent);
        console.log(listParent.childNodes);
        console.log(listParent.children);
+
+
+       const ul = document.getElementById('list-parent');
+        console.log(ul);
+        console.log(ul.parentNode);
+        console.log(ul.parentElement);
+        console.log(ul.previousElementSibling);
+        console.log(ul.previousSibling);
+        console.log(ul.nextElementSibling);
+        console.log(ul.nextSibling);
     </script>
 <script src="./js/script.js"></script>
 </body>
