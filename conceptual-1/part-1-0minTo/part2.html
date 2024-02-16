@@ -6,9 +6,9 @@
     <title>Play with DOM:Part-2-70MinTo</title>
 </head>
 <body>
-    <h2 id="title">play with DOM</h2>
+    <h2 class="first-heading" id="title">play with DOM</h2>
     <ul id="list-parent">
-        <li class="list-items">item-1</li>
+        <li style="display: none;" class="list-items">item-1</li>
         <li class="list-items">item-2</li>
         <!-- comment node -->
         <li class="list-items">item-3</li>
@@ -16,9 +16,48 @@
         <li class="list-items">item-5</li>
     </ul>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla cumque quisquam nisi quo sapiente molestias nam autem? Ex, ratione neque.</p>
-    <script>
-     
 
-    </script>    
+<script>
+    //  const li = document.querySelector('.list-items');
+     const li = document.querySelector('li');
+     console.log(li);
+     console.log(li.innerHTML);
+     console.log(li.innerText);
+     console.log(li.textContent);
+
+     const ul = document.querySelector('ul');
+     console.log(ul);
+     console.log(ul.innerHTML); //ul er bitorer complete code dekabe
+     console.log(ul.innerText);  //only browser displayr content golo dekabe
+     console.log(ul.textContent);//coder sob content golo dekabe
+    //  ul.innerHTML = '<b>Hello</b>' //inject the tag elemment directly;
+
+    const h2 = document.querySelector('h2');
+    console.log(h2);
+    h2.removeAttribute('class');
+    console.log(h2);
+
+    h2.setAttribute('class','add-attribute');
+    console.log(h2);
+
+    const id = h2.getAttribute('id');
+    console.log(id);
+
+    h2.classList.add('first','second','third','fourth');
+    console.log(h2);
+
+    h2.classList.remove('second');
+    console.log(h2);
+
+    const liCreate = document.createElement('li');
+    liCreate.innerText = 'last li created';
+    console.log(liCreate);
+
+    ul.appendChild(liCreate);
+
+    console.log(ul);
+    console.log(ul.innerHTML);
+    
+</script>    
 </body>
 </html>
