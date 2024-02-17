@@ -1,0 +1,1 @@
+// alert('mastering DOM Project');

@@ -1,0 +1,33 @@
+*************************Coceptual-2:milestone-5:Mastering DOM Project****************************
+Part-1:min-0To:
+
+1.
+follow Ryans website
+ryanser console e jao
+enter dao - window
+enter dao - document
+enter dao-console.dir(document)
+console.log(typeof document)
+dir is father of log
+
+2.  
+ function handleClick(){
+            console.log(event);
+            console.log(event.target);
+            console.log(event.target.parentNode);
+
+            console.log(event.target.parentNode.parentNode);
+            console.log(event.target.parentNode.parentNode.childNodes);
+
+            console.log(event.target.parentNode.parentNode.children);
+            console.log(event.target.parentNode.parentNode.children[0]);
+            // console.log(event.target.parentNode.parentNode.childNodes[0]);
+
+            for(let i = 0;i<event.target.parentNode.parentNode.children.length;i++){
+                console.log(event.target.parentNode.parentNode.children[i]);
+                console.log(event.target.parentNode.parentNode.children[i].innerText);
+            }
+        }
+
+
+3.
