@@ -137,5 +137,79 @@ h2.classList.add('first','second','third','fourth');
 
 
 
-Part-3:100min to
+Part-3:100Min to 145Min
 1.
+const countId = document.getElementById('count');
+let sum = 0;
+function plusBtn(){
+    // console.log('connected from plus btn');
+    // console.log(countId);
+    sum = sum + 1;
+    countId.innerText = sum;
+}
+
+2.
+const minusBtn = document.getElementById('minus-btn');
+
+function minusCount(){
+    sum = sum - 1;
+    countId.innerText = sum;
+}
+
+minusBtn.addEventListener('click',minusCount);
+
+3.
+minusBtn.addEventListener('click',function(){
+    const countId = document.getElementById('count');
+    console.log(countId);
+    sum = sum - 1;
+    countId.innerText = sum;
+})
+
+
+4.
+let serialCount = 1;
+document.getElementById('submit-btn').addEventListener('click',function(){
+    console.log('submit the btn');
+    const textInpt = document.querySelector('textarea');
+    const textValue = textInpt.value;
+    console.log(textValue);
+
+    const review = document.getElementById('review');
+    const p = document.createElement('p');
+    p.innerText =serialCount + '.' +textValue;
+    review.appendChild(p);
+    serialCount++;
+    document.querySelector('textarea').value = ' ';
+    // textValue = '';ai line t kaj korena keno?
+});
+
+5.
+document.getElementById('submit-btn').addEventListener('click',function(evnt){
+    console.log('event occure:',evnt);
+    console.log(evnt.target);
+})
+
+6.
+document.getElementById('text-area').addEventListener('keyup',function(evnt){
+    // console.log('event occure:',evnt);
+    console.log(evnt.target);
+    console.log(evnt.target.value);
+    console.log(evnt.key);
+    if(evnt.key === 'Enter'){
+    const textInpt = document.querySelector('textarea');
+    const textValue = textInpt.value;
+    console.log(textValue);
+
+    const review = document.getElementById('review');
+    const p = document.createElement('p');
+    p.innerText =serialCount + '.' +textValue;
+    review.appendChild(p);
+
+    serialCount++;
+    document.querySelector('textarea').value = ' ';
+  }
+
+})
+
+
