@@ -1,5 +1,5 @@
 *************************Coceptual-2:milestone-5:Mastering DOM Project****************************
-Part-1:min-0To:
+Part-1:min-0To22:
 
 1.
 follow Ryans website
@@ -31,3 +31,5 @@ dir is father of log
 
 
 3.
+875750,
+875973,875976,
