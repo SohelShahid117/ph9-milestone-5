@@ -8,7 +8,8 @@
     <!-- daisy UI & Tailwid from daisyUI doc install-play cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
@@ -17,74 +18,104 @@
     <!-- 27-2 Background Design And Home Section Setup -->
     <!-- 27-3 PlayGround Setup And Keyboard Design -->
     <!-- 27-4 Design PlayGround Screen, Life And Score -->
+    <!-- 27-5 Added Score page and explained screen toggle concept -->
     <!-- <p class="font-poppins">HELLO world Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos, assumenda!</p> -->
-   <main class="min-h-screen bg-[#1E1E1E] bg-[url(./imgs/background.png)] bg-no-repeat bg-center">
+    <main class="min-h-screen bg-[#1E1E1E] bg-[url(./imgs/bg.png)] bg-no-repeat bg-center">
 
-    <!-- home screen -->
+        <!-- home screen -->
 
-    <section class="home text-white flex flex-col items-center justify-center h-screen hidden">
-        <div class="flex flex-col items-center justify-center border gap-5">
-            <h1 class="text-5xl font-bold text-slate-100 uppercase">alphabet clash</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis facilis voluptatum nisi eveniet impedit    consequatur quas architecto vitae sunt error, nostrum quos quae magni perspiciatis ex eos, cupiditate atque    incidunt sit ea voluptas eius deleniti? Laudantium, velit eligendi. Itaque corporis maiores inventore nulla    doloribus? Consequuntur voluptates porro pariatur? Saepe, quae.</p>
-            <button class="btn bg-orange-500 border-orange-500 text-white hover:bg-orange-300">Play Now</button>
-        </div>
-    </section>
-
-    
-    <!-- playground start -->
-
-    <section class="play-ground">
-        <div>
-            <!-- screen -->
-            <div class="artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] rounded-2xl bg-[#FFFFFFB3]">1024×320</div>
-            <!-- keyboard start -->
-            <div>
-                <div class="flex justify-center gap-1 my-1 w-full">
-                    <kbd class="kbd">q</kbd>
-                    <kbd class="kbd">w</kbd>
-                    <kbd class="kbd">e</kbd>
-                    <kbd class="kbd">r</kbd>
-                    <kbd class="kbd">t</kbd>
-                    <kbd class="kbd">y</kbd>
-                    <kbd class="kbd">u</kbd>
-                    <kbd class="kbd">i</kbd>
-                    <kbd class="kbd">o</kbd>
-                    <kbd class="kbd">p</kbd>
-                  </div> 
-                  <div class="flex justify-center gap-1 my-1 w-full">
-                    <kbd class="kbd">a</kbd>
-                    <kbd class="kbd">s</kbd>
-                    <kbd class="kbd">d</kbd>
-                    <kbd class="kbd">f</kbd>
-                    <kbd class="kbd">g</kbd>
-                    <kbd class="kbd">h</kbd>
-                    <kbd class="kbd">j</kbd>
-                    <kbd class="kbd">k</kbd>
-                    <kbd class="kbd">l</kbd>
-                  </div> 
-                  <div class="flex justify-center gap-1 my-1 w-full">
-                    <kbd class="kbd">z</kbd>
-                    <kbd class="kbd">x</kbd>
-                    <kbd class="kbd">c</kbd>
-                    <kbd class="kbd">v</kbd>
-                    <kbd class="kbd">b</kbd>
-                    <kbd class="kbd">n</kbd>
-                    <kbd class="kbd">m</kbd>
-                    <kbd class="kbd">/</kbd>
-                  </div>
+        <section class="home text-white flex flex-col items-center justify-center h-screen hidden">
+            <div class="flex flex-col items-center justify-center border gap-5">
+                <h1 class="text-5xl font-bold text-slate-100 uppercase">alphabet clash</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis facilis voluptatum nisi eveniet impedit
+                    consequatur quas architecto vitae sunt error, nostrum quos quae magni perspiciatis ex eos,
+                    cupiditate atque incidunt sit ea voluptas eius deleniti? Laudantium, velit eligendi. Itaque corporis
+                    maiores inventore nulla doloribus? Consequuntur voluptates porro pariatur? Saepe, quae.</p>
+                <button class="btn bg-orange-500 border-orange-500 text-white hover:bg-orange-300">Play Now</button>
             </div>
-            <!-- keyboard end -->
-            <!-- life line/life score -->
-        </div>
+        </section>
 
-    </section>
 
-    <!-- playground end -->
+        <!-- playground start -->
 
-    <section class="score">
-        
-    </section>
-   </main>
+        <section class="play-ground">
+            <div class="flex flex-col items-center gap-20 pt-16">
+                <!-- screen -->
+                <div
+                    class="artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] rounded-2xl bg-[#FFFFFFB3]">
+                    <div class="flex justify-center">
+                        <p class="bg-slate-400 px-6 py-4 rounded-b-xl text-white">Don't watch keyboard while playing...
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <p class="text-9xl text-black font-bold">Y</p>
+                    </div>
+
+                </div>
+                <!-- keyboard start -->
+                <div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">q</kbd>
+                        <kbd class="kbd">w</kbd>
+                        <kbd class="kbd">e</kbd>
+                        <kbd class="kbd">r</kbd>
+                        <kbd class="kbd">t</kbd>
+                        <kbd class="kbd">y</kbd>
+                        <kbd class="kbd">u</kbd>
+                        <kbd class="kbd">i</kbd>
+                        <kbd class="kbd">o</kbd>
+                        <kbd class="kbd">p</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">a</kbd>
+                        <kbd class="kbd">s</kbd>
+                        <kbd class="kbd">d</kbd>
+                        <kbd class="kbd">f</kbd>
+                        <kbd class="kbd">g</kbd>
+                        <kbd class="kbd">h</kbd>
+                        <kbd class="kbd">j</kbd>
+                        <kbd class="kbd">k</kbd>
+                        <kbd class="kbd">l</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">z</kbd>
+                        <kbd class="kbd">x</kbd>
+                        <kbd class="kbd">c</kbd>
+                        <kbd class="kbd">v</kbd>
+                        <kbd class="kbd">b</kbd>
+                        <kbd class="kbd">n</kbd>
+                        <kbd class="kbd">m</kbd>
+                        <kbd class="kbd">/</kbd>
+                    </div>
+                </div>
+                <!-- keyboard end -->
+                <!-- life line/life score -->
+                <div class="flex justify-between border-hidden w-3/4">
+                    <div>
+                        <button class="btn bg-purple-300 rounded-full text-white border-none px-4">
+                            life
+                            <span class="text-white">&#9829;</span>
+                            <span>1</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn bg-purple-300 rounded-full text-white border-none px-4">
+                            Score
+                            <span>&#36;</span>
+                            <span>1</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- playground end -->
+
+        <section class="score">
+
+        </section>
+    </main>
 
 
     <script src="./js/index.js"></script>

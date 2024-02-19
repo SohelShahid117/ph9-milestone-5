@@ -69,6 +69,85 @@
 27-4 Design PlayGround Screen, Life And Score:
 
 1.
+<!-- playground start -->
+
+        <section class="play-ground">
+            <div class="flex flex-col items-center gap-20 pt-16">
+                <!-- screen -->
+                <div
+                    class="artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] rounded-2xl bg-[#FFFFFFB3]">
+                    <div class="flex justify-center">
+                        <p class="bg-slate-400 px-6 py-4 rounded-b-xl text-white">Don't watch keyboard while playing...
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <p class="text-9xl text-black font-bold">Y</p>
+                    </div>
+
+                </div>
+                <!-- keyboard start -->
+                <div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">q</kbd>
+                        <kbd class="kbd">w</kbd>
+                        <kbd class="kbd">e</kbd>
+                        <kbd class="kbd">r</kbd>
+                        <kbd class="kbd">t</kbd>
+                        <kbd class="kbd">y</kbd>
+                        <kbd class="kbd">u</kbd>
+                        <kbd class="kbd">i</kbd>
+                        <kbd class="kbd">o</kbd>
+                        <kbd class="kbd">p</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">a</kbd>
+                        <kbd class="kbd">s</kbd>
+                        <kbd class="kbd">d</kbd>
+                        <kbd class="kbd">f</kbd>
+                        <kbd class="kbd">g</kbd>
+                        <kbd class="kbd">h</kbd>
+                        <kbd class="kbd">j</kbd>
+                        <kbd class="kbd">k</kbd>
+                        <kbd class="kbd">l</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">z</kbd>
+                        <kbd class="kbd">x</kbd>
+                        <kbd class="kbd">c</kbd>
+                        <kbd class="kbd">v</kbd>
+                        <kbd class="kbd">b</kbd>
+                        <kbd class="kbd">n</kbd>
+                        <kbd class="kbd">m</kbd>
+                        <kbd class="kbd">/</kbd>
+                    </div>
+                </div>
+                <!-- keyboard end -->
+                <!-- life line/life score -->
+                <div class="flex justify-between border-hidden w-3/4">
+                    <div>
+                        <button class="btn bg-purple-300 rounded-full text-white border-none px-4">
+                            life
+                            <span class="text-white">&#9829;</span>
+                            <span>1</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn bg-purple-300 rounded-full text-white border-none px-4">
+                            Score
+                            <span>&#36;</span>
+                            <span>1</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+27-5 Added Score page and explained screen toggle concept:
+1.
 
 
 
