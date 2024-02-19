@@ -1,6 +1,76 @@
 ***************************Module-27:*********************************
 
 27-1 Project Overview And Setup:
+27-2 Background Design And Home Section Setup:
+
+1.
+<main class="min-h-screen bg-[#1E1E1E] bg-[url(./imgs/background.png)] bg-no-repeat bg-center">
+
+    <section class="home text-white flex flex-col items-center justify-center h-screen">
+
+        <div class="flex flex-col items-center justify-center border gap-5">
+            <h1 class="text-5xl font-bold text-slate-100 uppercase">alphabet clash</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis facilis voluptatum nisi eveniet impedit</p>
+            <button class="btn bg-orange-500 border-orange-500 text-white hover:bg-orange-300">Play Now</button>
+        </div>
+
+    </section>
+</main>
+
+27-3 PlayGround Setup And Keyboard Design:
+
+1.<section class="play-ground">
+        <div>
+            <!-- screen -->
+            <div class="artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] rounded-2xl bg-[#FFFFFFB3]">1024×320</div>
+            <!-- keyboard start -->
+            <div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd class="kbd">q</kbd>
+                    <kbd class="kbd">w</kbd>
+                    <kbd class="kbd">e</kbd>
+                    <kbd class="kbd">r</kbd>
+                    <kbd class="kbd">t</kbd>
+                    <kbd class="kbd">y</kbd>
+                    <kbd class="kbd">u</kbd>
+                    <kbd class="kbd">i</kbd>
+                    <kbd class="kbd">o</kbd>
+                    <kbd class="kbd">p</kbd>
+                  </div> 
+                  <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd class="kbd">a</kbd>
+                    <kbd class="kbd">s</kbd>
+                    <kbd class="kbd">d</kbd>
+                    <kbd class="kbd">f</kbd>
+                    <kbd class="kbd">g</kbd>
+                    <kbd class="kbd">h</kbd>
+                    <kbd class="kbd">j</kbd>
+                    <kbd class="kbd">k</kbd>
+                    <kbd class="kbd">l</kbd>
+                  </div> 
+                  <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd class="kbd">z</kbd>
+                    <kbd class="kbd">x</kbd>
+                    <kbd class="kbd">c</kbd>
+                    <kbd class="kbd">v</kbd>
+                    <kbd class="kbd">b</kbd>
+                    <kbd class="kbd">n</kbd>
+                    <kbd class="kbd">m</kbd>
+                    <kbd class="kbd">/</kbd>
+                  </div>
+            </div>
+            <!-- keyboard end -->
+            <!-- life line/life score -->
+        </div>
+
+    </section>
+
+
+27-4 Design PlayGround Screen, Life And Score:
+
+1.
+
+
 
 
 
