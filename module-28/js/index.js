@@ -20,6 +20,7 @@ function play() {
 
 // 28-1 Project Review And Keyboard Event:
 // 28-2 Get The Key Pressed And Check Right Or Wrong Key Pressed
+// 28-3 Clear Right Key Background And Continue The Game
 function handleKeyboardKeyUpEvent(event){
     // console.log('button press');
     // console.log(event);
@@ -34,6 +35,9 @@ function handleKeyboardKeyUpEvent(event){
     //checked
     if(currentAlphabet === playerPressed){
         console.log('you win!You got a point.');
+        console.log('u have prsd',currentAlphabet);
+        removeBackgroundColor(currentAlphabet);
+        continueGame();
     }else{
         console.log('you loss! You missed a life');
     }

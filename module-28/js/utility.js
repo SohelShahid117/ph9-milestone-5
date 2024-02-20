@@ -13,6 +13,11 @@ function setBackgroundColor(elementId){
     const element = document.getElementById(elementId);
     element.classList.add('bg-amber-400');
 }
+// 28-3 Clear Right Key Background And Continue The Game
+function removeBackgroundColor(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('bg-amber-400');
+}
 
 // 27-7 Build getRandom alphabet Function.mp4:
 function getARandomAlphabet() {

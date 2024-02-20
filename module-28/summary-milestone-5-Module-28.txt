@@ -1,0 +1,68 @@
+***************************Module-28:*********************************
+
+28-1 Project Review And Keyboard Event:
+28-2 Get The Key Pressed And Check Right Or Wrong Key Pressed
+
+1.
+function handleKeyboardKeyUpEvent(event){
+    // console.log('button press');
+    // console.log(event);
+    // console.log(event.key);
+    const playerPressed = event.key;
+    console.log('player press',playerPressed);
+
+    // expected press
+    const currentAlphabet = document.getElementById('current-alphabet').innerText.toLocaleLowerCase();
+    console.log('current alphabet',currentAlphabet)
+
+    //checked
+    if(currentAlphabet === playerPressed){
+        console.log('you win!You got a point.');
+    }else{
+        console.log('you loss! You missed a life');
+    }
+}
+document.addEventListener('keyup',handleKeyboardKeyUpEvent);
+
+
+
+
+28-3 Clear Right Key Background And Continue The Game:
+1.
+function handleKeyboardKeyUpEvent(event){
+    // console.log('button press');
+    // console.log(event);
+    // console.log(event.key);
+    const playerPressed = event.key;
+    console.log('player press',playerPressed);
+
+    // expected press
+    const currentAlphabet = document.getElementById('current-alphabet').innerText.toLocaleLowerCase();
+    console.log('current alphabet',currentAlphabet)
+
+    //checked
+    if(currentAlphabet === playerPressed){
+        console.log('you win!You got a point.');
+
+        console.log('u have prsd',currentAlphabet);
+
+        removeBackgroundColor(currentAlphabet);
+        continueGame();
+    }else{
+        console.log('you loss! You missed a life');
+    }
+}
+document.addEventListener('keyup',handleKeyboardKeyUpEvent);
+
+
+2.
+function removeBackgroundColor(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('bg-amber-400');
+}
+
+
+
+
+
+
