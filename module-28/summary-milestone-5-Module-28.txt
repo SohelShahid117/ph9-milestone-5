@@ -64,5 +64,159 @@ function removeBackgroundColor(elementId){
 
 
 
+28-4 Update Score and Life based on right or wrong key press:
+1.
+<div class="flex justify-between border-hidden w-3/4">
+                    <div>
+                        <button class="btn bg-purple-500 rounded-full text-white border-none px-4">
+                            life
+                            <span class="text-white">&#9829;</span>
+                            <span id="current-life">5</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn bg-purple-500 rounded-full text-white border-none px-4">
+                            Score
+                            <span>&#36;</span>
+                            <span id="current-score">0</span>
+                        </button>
+                    </div>
+                </div>
+
+
+2.
+if (currentAlphabet === playerPressed) {
+        console.log('you win!You got a point.');
+        console.log('u have prsd', currentAlphabet);
+
+        // update score
+
+        const currentScore = document.getElementById('current-score');
+        const currentScoreText = currentScore.innerText;
+        const currentScoreTextValue = parseInt(currentScoreText);
+        console.log(typeof currentScoreTextValue, currentScoreTextValue);
+
+        let newScore = currentScoreTextValue + 1;
+        currentScore.innerText = newScore;
+        // const currentScore2 = document.getElementById('current-score');
+        // currentScore2.innerText = newScore;
+
+        removeBackgroundColor(currentAlphabet);
+        continueGame();
+    } else {
+        console.log('you loss! You missed a life');
+
+        const currentLife = document.getElementById('current-life');
+        const currentLifeText = currentLife.innerText;
+        const currentLifeTextValue = parseInt(currentLifeText);
+        console.log(typeof currentLifeTextValue, currentLifeTextValue);
+
+        let newLife = currentLifeTextValue - 1;
+        currentLife.innerText = newLife;
+    }
+}
+document.addEventListener('keyup', handleKeyboardKeyUpEvent);
+
+
+
+28-6 Implement Play Again and reset life and score
+1.
+  <section id="score-section" class="score flex flex-col justify-center items-center min-h-screen hidden ">
+            <div class="text-white  border-none  text-center space-y-10 rounded-lg p-5 bg-[#FFFFFF33]">
+                <h3 class="text-3xl">Game Over!!!</h3>
+                <h1 class="text-8xl">
+                    <span class="font-extrabold">Score:</span>
+                    <span>14</span>
+                </h1>
+                <button onclick="play()" class="btn">Play Again</button>
+                <p>Practice will make u pro...</p>
+            </div>
+        </section>
+
+
+2.
+if (currentAlphabet === playerPressed) {
+        console.log('you win!You got a point.');
+        console.log('u have prsd', currentAlphabet);
+
+        // update score
+
+        const currentScore = document.getElementById('current-score');
+        const currentScoreText = currentScore.innerText;
+        const currentScoreTextValue = parseInt(currentScoreText);
+        console.log(typeof currentScoreTextValue, currentScoreTextValue);
+
+        let newScore = currentScoreTextValue + 1;
+        currentScore.innerText = newScore;
+        // const currentScore2 = document.getElementById('current-score');
+        // currentScore2.innerText = newScore;
+
+        removeBackgroundColor(currentAlphabet);
+        continueGame();
+    } else {
+        console.log('you loss! You missed a life');
+
+        const currentLife = document.getElementById('current-life');
+        const currentLifeText = currentLife.innerText;
+        const currentLifeTextValue = parseInt(currentLifeText);
+        console.log(typeof currentLifeTextValue, currentLifeTextValue);
+
+        let newLife = currentLifeTextValue - 1;
+        // 28-6 Implement Play Again and reset life and score
+        currentLife.innerText = newLife;
+        if (newLife === 0) {
+            alert('if u wrong u loss your life')
+        }
+        if (newLife === 0) {
+            // console.log('game over');
+            gameOver();
+        }
+    }
+}
+document.addEventListener('keyup', handleKeyboardKeyUpEvent);
+
+
+3.
+function play() {
+    hideElementById('home-screen');
+    hideElementById('score-section');
+    showElementById('playground-screen');
+    const currentScore = document.getElementById('current-score');
+    let newScore = 0;
+    currentScore.innerText = newScore;
+
+    const currentLife = document.getElementById('current-life');
+    let newLife = 5;
+    currentLife.innerText = newLife;
+
+    continueGame();
+}
+
+function gameOver() {
+    hideElementById('playground-screen');
+    showElementById('score-section');
+
+}
+
+
+4.
+function hideElementById(elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.add('hidden');
+}
+function showElementById(elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.remove('hidden');
+}
+
+
+
+
+28-7 Final score, clear previous Alphabet and Quit Game:
+1.
+
+
+
+
 
 

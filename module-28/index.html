@@ -27,6 +27,8 @@
     <!-- 28-2 Get The Key Pressed And Check Right Or Wrong Key Pressed -->
     <!-- 28-3 Clear Right Key Background And Continue The Game -->
     <!-- 28-4 Update Score And Life Based On Right Or Wrong Key Press -->
+    <!-- 28-5 Recap get and set score or life using function -->
+    <!-- 28-7 Final score, clear previous Alphabet and Quit Game -->
     <!-- <p class="font-poppins">HELLO world Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos, assumenda!</p> -->
     <main class="min-h-screen bg-[#1E1E1E] bg-[url(./imgs/bg.png)] bg-no-repeat bg-center">
 
@@ -96,19 +98,21 @@
                 </div>
                 <!-- keyboard end -->
                 <!-- life line/life score -->
+                <!-- 28-4 Update Score and Life based on right or wrong key press -->
+                <!-- 28-5 Recap get and set score or life using function -->
                 <div class="flex justify-between border-hidden w-3/4">
                     <div>
-                        <button class="btn bg-purple-300 rounded-full text-white border-none px-4">
+                        <button class="btn bg-purple-500 rounded-full text-white border-none px-4">
                             life
                             <span class="text-white">&#9829;</span>
-                            <span>1</span>
+                            <span id="current-life">5</span>
                         </button>
                     </div>
                     <div>
-                        <button class="btn bg-purple-300 rounded-full text-white border-none px-4">
+                        <button class="btn bg-purple-500 rounded-full text-white border-none px-4">
                             Score
                             <span>&#36;</span>
-                            <span>1</span>
+                            <span id="current-score">0</span>
                         </button>
                     </div>
                 </div>
@@ -118,13 +122,15 @@
         <!-- playground end -->
 
         <!-- score start -->
-        <section class="score flex flex-col justify-center items-center min-h-screen hidden ">
+        <!-- 28-6 Implement Play Again and reset life and score -->
+        <section id="score-section" class="score flex flex-col justify-center items-center min-h-screen hidden ">
             <div class="text-white  border-none  text-center space-y-10 rounded-lg p-5 bg-[#FFFFFF33]">
+                <h3 class="text-3xl">Game Over!!!</h3>
                 <h1 class="text-8xl">
                     <span class="font-extrabold">Score:</span>
-                    <span>14</span>
+                    <span id="game-score">14</span>
                 </h1>
-                <button class="btn">Play Now</button>
+                <button onclick="play()" class="btn">Play Again</button>
                 <p>Practice will make u pro...</p>
             </div>
         </section>
