@@ -8,6 +8,12 @@ function showElementById(elementId) {
     element.classList.remove('hidden');
 }
 
+// 27-8 (Recap) Random Alphabet and highlight selected alphabet
+function setBackgroundColor(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.add('bg-amber-400');
+}
+
 // 27-7 Build getRandom alphabet Function.mp4:
 function getARandomAlphabet() {
     // const alphabetStr = document.getElementsByClassName('kbd');
@@ -23,5 +29,8 @@ function getARandomAlphabet() {
     return randomAlphabet;
 }
 
+// 27-9 Module Summary:all above
 
-// 27-8 (Recap) Random Alphabet and highlight selected alphabet
+
+
+
